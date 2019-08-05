@@ -7,7 +7,6 @@ import android.support.v7.widget.CardView;
 import android.text.InputType;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +14,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     private CardView signUpButton;
     TextView alreadyRegistered, forgotPassword;
-    EditText emailEditText, passwordEditText, cfrm_pwdEditText;
+    EditText emailEditText, passwordEditText, confirm_passwordEditText;
     DatabaseHelper db;
 
     @Override
@@ -28,7 +27,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         emailEditText = (EditText) findViewById(R.id.email);
         passwordEditText = (EditText) findViewById(R.id.passWord);
-        cfrm_pwdEditText = (EditText) findViewById(R.id.confirmPassword);
+        confirm_passwordEditText = (EditText) findViewById(R.id.confirmPassword);
 
         // Adding click listener to the card
 //        signUpButton.setOnClickListener(this);
@@ -52,7 +51,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             public void onClick(View v) {
                 String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
-                String confirm_pwd = cfrm_pwdEditText.getText().toString().trim();
+                String confirm_pwd = confirm_passwordEditText.getText().toString().trim();
 
                 if (password.equals(confirm_pwd)) {
 
