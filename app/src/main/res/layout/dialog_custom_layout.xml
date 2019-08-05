@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/moviePoster"
+            android:layout_width="170dp"
+            android:layout_height="300dp"
+            app:srcCompat="@mipmap/ic_launcher"
+
+
+            />
+
+        <TextView
+            android:id="@+id/titleDialog"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="34sp"
+            android:layout_toRightOf="@+id/moviePoster"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+
+
+            />
+
+        <TextView
+            android:id="@+id/runTime"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:text="Runtime"
+            android:textSize="20sp"
+            android:layout_toRightOf="@+id/moviePoster"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/titleDialog"
+
+
+            />
+
+        <Spinner
+            android:id="@+id/spinnerDatePicker"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="139dp"
+            android:layout_toRightOf="@+id/moviePoster"
+            android:popupBackground="#FF9100"
+
+
+            >
+
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinnerTimePicker"
+            android:layout_width="210dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/moviePoster"
+            android:layout_marginTop="190dp"
+            android:layout_marginLeft="10dp"
+            android:popupBackground="#FF9100"
+
+
+
+
+            >
+
+        </Spinner>
+
+        <Button
+            android:id="@+id/bookTicket"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/moviePoster"
+            android:background="#FF9100"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="230dp"
+            android:layout_marginLeft="10dp"
+            android:text="Book Ticket"
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>
